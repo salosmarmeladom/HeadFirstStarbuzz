@@ -19,16 +19,16 @@ public class DrinkActivity extends Activity {
         Drink drink = Drink.drinks[drinkId];
 
         //изображение напитка
-        ImageView photo = (ImageView) findViewById(R.id.photo);
+        ImageView photo = findViewById(R.id.photo);
         photo.setImageResource(drink.getImageResourceId());
         photo.setContentDescription(drink.getName());
 
         //название напитка
-        TextView name = (TextView) findViewById(R.id.name);
+        TextView name = findViewById(R.id.name);
         name.setText(drink.getName());
 
         //описание напитка
-        TextView description = (TextView) findViewById(R.id.description);
+        TextView description = findViewById(R.id.description);
         description.setText(drink.getDescription());
     }
 

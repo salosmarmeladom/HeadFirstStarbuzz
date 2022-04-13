@@ -1,9 +1,11 @@
 package com.hfad.starbuzz;
 
+import androidx.annotation.NonNull;
+
 public class Drink {
-    private String name;
-    private String description;
-    private int imageResourceId;
+    private final String name;
+    private final String description;
+    private final int imageResourceId;
 
     //variable array of drinks
     public static final Drink[] drinks = {
@@ -31,6 +33,7 @@ public class Drink {
         return imageResourceId;
     }
 
+    @NonNull
     public String toString(){
         return this.name;
     }
