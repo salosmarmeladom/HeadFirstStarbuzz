@@ -1,13 +1,12 @@
 package com.hfad.starbuzz;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
-import android.content.Intent;
-import android.view.View;
 import android.widget.AdapterView;
 import android.widget.CursorAdapter;
 import android.widget.ListView;
@@ -63,6 +62,16 @@ public class TopLevelActivity extends Activity {
             startActivity(intent);
         });
     }
+
+    @Override
+    public void onRestart() {
+    super.onRestart();
+    Cursor newCursor = db.query("DRINK", new String[]{"_id", "NAME"}, "FAVORITE = 1", null, null, null, null);
+    ListView listFavorites = findViewById(R.id.list_favorites);
+    CursorAdapter adapter = (CursorAdapter) listFavorites.getAdapter();
+    adapter.changeCursor(newCursor);
+    }
+
     //закрытие курсора и базы данных
     @Override
     public void onDestroy(){
