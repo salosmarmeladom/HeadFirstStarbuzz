@@ -2,6 +2,8 @@
     <string name="app_name">Starbuzz</string>
     <string name="starbuzz_logo">Starbuzz logo</string>
     <string name="drink_photo">Drink photo</string>
+    <string name="favorite">Favorite</string>
+    <string name="favorites">Your favorite drinks:</string>
     <string-array name="options">
         <item>Drinks</item>
         <item>Food</item>

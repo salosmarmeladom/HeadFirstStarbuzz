@@ -40,7 +40,7 @@ public class StarbuzzDatabaseHelper extends SQLiteOpenHelper {
             insertDrink(db, "Filter", "Highest quality beans roasted and brewed fresh", R.drawable.filter);
         }
         if (oldVersion < 2){
-            db.execSQL("ALTER TABLE DRINK ADD COLUMN FAVOURITE NUMERIC;");
+            db.execSQL("ALTER TABLE DRINK ADD COLUMN FAVORITE NUMERIC;");
         }
     }
 }
